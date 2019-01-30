@@ -30,7 +30,7 @@ public class facebook {
 	String firstname;
 	String lastname;
 	String email;
-	String password;
+	String password1;
 	int myRows,myCols;
 	String my_input_data;
 	String expectedresult;
@@ -59,7 +59,7 @@ public class facebook {
 		firstname=myXLSheet[k][0];
 		lastname=myXLSheet[k][1];
 		email=myXLSheet[k][2];
-		password=myXLSheet[k][3];
+		password1=myXLSheet[k][3];
 		expectedresult=myXLSheet[k][4];
 		Thread.sleep(3000);
 		
@@ -69,7 +69,7 @@ public class facebook {
 		wd.findElement(By.xpath(".//*[@id='u_0_e']")).sendKeys(lastname);
 		wd.findElement(By.xpath(".//*[@id='u_0_h']")).sendKeys(email);
 		wd.findElement(By.xpath(".//*[@id='u_0_k']")).sendKeys(email);
-		wd.findElement(By.xpath(".//*[@id='u_0_o']")).sendKeys(password);
+		wd.findElement(By.xpath(".//*[@id='u_0_o']")).sendKeys(password1);
 		String title=wd.getTitle();
 		Assert.assertEquals(title,expectedresult);
 		System.out.println(title);
