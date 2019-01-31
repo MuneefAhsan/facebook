@@ -38,7 +38,7 @@ public static class facebook {
 	String lastname;
 	String username;
 	String password;
-	String phonenumber;
+	String phonenumber1;
 	String month;
 	String day;
 	String year;
@@ -74,7 +74,7 @@ public static class facebook {
 		lastname=myXLSheet[k][1];
 		username=myXLSheet[k][2];
 		password=myXLSheet[k][3];
-		phonenumber=myXLSheet[k][4];
+		phonenumber1=myXLSheet[k][4];
 		month=myXLSheet[k][5];
 		day=myXLSheet[k][6];
 		year=myXLSheet[k][7];
@@ -91,7 +91,7 @@ public static class facebook {
 		yahoo.lastname().sendKeys(lastname);
 		yahoo.username().sendKeys(username);
 		yahoo.password().sendKeys(password);
-		yahoo.phonenumber().sendKeys(phonenumber);
+		yahoo.phonenumber().sendKeys(phonenumber1);
 		Select month1=new Select(wd.findElement(By.xpath(".//*[@id='usernamereg-month']")));
 		month1.selectByVisibleText(month);
 		yahoo.day().sendKeys(day);
